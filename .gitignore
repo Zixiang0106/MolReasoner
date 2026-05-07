@@ -205,3 +205,13 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Large wheel files and sample data
+*.whl
+*.whl.*
+LLaMA-Factory/scripts/molecule_inference_sample.json
+
+# molreasoner data and logs
+LLaMA-Factory/scripts/molreasoner/*.jsonl
+LLaMA-Factory/scripts/molreasoner/slurm-*.out
+LLaMA-Factory/scripts/molreasoner/data/

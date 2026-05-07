@@ -1,21 +1,21 @@
 ### model
-model_name_or_path: xxxx/Qwen/Qwen2.5-7B-Instruct # Change this to your Qwen2.5-7b-instruct model path
+model_name_or_path: /mnt/ceph/users/zlu10/llm/models/Qwen2.5-7B-Instruct # Change this to your Qwen2.5-7b-instruct model path
 
 ### method
 stage: sft
 do_train: true
 finetuning_type: full
-deepspeed: examples/deepspeed/ds_z3_config.json
+deepspeed: /mnt/ceph/users/zlu10/llm/MolReasoner/LLaMA-Factory/examples/deepspeed/ds_z3_config.json
 
 ### dataset
-dataset: molecule_captioning_train # Change this to your dataset
+dataset: tox_train # Change this to your dataset
 template: qwen
 cutoff_len: 2048
 overwrite_cache: true
 preprocessing_num_workers: 16
 
 ### output
-output_dir: xxxx # Change this to your output directory
+output_dir: output # Change this to your output directory
 logging_steps: 10
 save_steps: 1000
 plot_loss: true
@@ -25,7 +25,7 @@ overwrite_output_dir: true
 per_device_train_batch_size: 1
 gradient_accumulation_steps: 16
 learning_rate: 1.0e-5
-num_train_epochs: 4.0
+num_train_epochs: 10.0
 lr_scheduler_type: cosine
 warmup_ratio: 0.1
 bf16: true

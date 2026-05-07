@@ -114,5 +114,5 @@ def evaluate_from_json(json_path=None, text_model='/mnt/ceph/users/zlu10/llm/mod
 
 if __name__ == "__main__":
     evaluate_from_json(
-        json_path="xxxx",
+        json_path="molinst_l2_mol2desc_predictions.jsonl",
     )

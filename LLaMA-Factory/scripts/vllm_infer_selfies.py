@@ -16,7 +16,7 @@ import gc
 import json
 from typing import Optional
 import os
-os.environ["VLLM_LOCAL_DIR"] = "/fs_mol/guojianz/ckps"
+os.environ["VLLM_LOCAL_DIR"] = "/mnt/ceph/users/zlu10/llm/MolReasoner/LLaMA-Factory/caption"
 import fire
 from tqdm import tqdm
 from transformers import Seq2SeqTrainingArguments
